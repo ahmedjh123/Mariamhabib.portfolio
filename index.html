@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariam Habib | Urban Planning Portfolio</title>
+<meta name="description" content="Portfolio av Mariam Habib - Urban Planning Student specialiserad på tillgänglighet och social integration">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4B5563',secondary:'#9CA3AF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #EBE6E2;
+color: #333;
+}
+.heading {
+font-family: 'Bodoni Moda', serif;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #4B5563;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.nav-link.active::after {
+width: 100%;
+}
+.section {
+min-height: 100vh;
+padding-top: 80px;
+scroll-margin-top: 80px;
+}
+.project-card {
+transition: transform 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-8px);
+}
+.scroll-top {
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+}
+.scroll-top.visible {
+opacity: 1;
+visibility: visible;
+}
+</style>
+</head>
+<body class="relative">
+<header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#home" class="heading text-2xl font-semibold text-gray-800">MH</a>
+<div class="flex gap-8">
+<a href="#home" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+<a href="#about" class="nav-link text-gray-600 hover:text-gray-900">About</a>
+<a href="#projects" class="nav-link text-gray-600 hover:text-gray-900">Projects</a>
+<a href="#contact" class="nav-link text-gray-600 hover:text-gray-900">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section id="home" class="section relative bg-gradient-to-r from-[#EBE6E2] to-[#E5E2DC]">
+<div class="container mx-auto px-6 h-screen flex items-center">
+<div class="w-full md:w-1/2">
+<h1 class="heading text-6xl font-semibold mb-6 text-gray-800">MARIAM<br>HABIB</h1>
+<p class="uppercase tracking-widest text-sm text-gray-600 mb-8">URBAN PLANNING STUDENT</p>
+<a href="#projects" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-button hover:bg-gray-700 transition-colors">
+View my projects <i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="section bg-white">
+<div class="container mx-auto px-6 py-20">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<img src="https://static.readdy.ai/image/fe1c75caecb860cf16a12336482def3b/b1a34ae5bbe46b8df80552293a234349.jpeg"
+alt="Mariam Habib Profile"
+class="rounded-lg shadow-xl w-full h-[600px] object-cover object-center">
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="heading text-4xl font-semibold mb-8 text-gray-800">About Me</h2>
+<p class="text-gray-700 leading-relaxed mb-6">
+I am an Urban Planning student at Malmö University, specializing in accessibility and social integration. I am passionate about creating inclusive urban environments, particularly for people with disabilities.
+</p>
+<p class="text-gray-700 leading-relaxed mb-8">
+Through my work, including GIS analysis and urban design, I strive to make cities more accessible and equitable for everyone. My vision is to create urban environments where all people, regardless of physical conditions, can move freely and participate in city life.
+</p>
+<div class="flex gap-4">
+<a href="#contact" class="px-6 py-3 bg-primary text-white rounded-button hover:bg-gray-700 transition-colors">Contact me</a>
+<a href="#projects" class="px-6 py-3 border border-primary text-primary rounded-button hover:bg-gray-50 transition-colors">View projects</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="section bg-gray-50">
+<div class="container mx-auto px-6 py-20">
+<h2 class="heading text-4xl font-semibold mb-12 text-center text-gray-800">Few of my Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Urban%20planning%20GIS%20map%20showing%20accessibility%20analysis%20of%20a%20neighborhood%20with%20color-coded%20buildings%2C%20streets%2C%20and%20accessibility%20points%20marked%2C%20detailed%20urban%20footprint%20with%20legend%20showing%20entrances%2C%20disabled%20parking%20spaces%2C%20and%20public%20transportation%20stops&width=800&height=600&seq=2&orientation=landscape"
+alt="GIS Accessibility Map"
+class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="heading text-2xl font-semibold mb-4 text-gray-800">Rosengård Accessibility Analysis</h3>
+<p class="text-gray-700 mb-4 line-clamp-3">
+A project assessing the accessibility of grocery stores in Rosengård Centrum for people with disabilities through GIS analysis and interviews.
+</p>
+<button class="text-primary hover:text-gray-700 flex items-center gap-2">
+Read more <i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=3D%20architectural%20model%20of%20a%20waterfront%20urban%20development%20with%20high-rise%20buildings%20featuring%20green%20roofs%2C%20wooden%20promenade%20along%20waterfront%2C%20blue%20water%2C%20circular%20green%20space%2C%20tiered%20platforms%2C%20sustainable%20urban%20design%20concept%2C%20SketchUp%20style%20rendering&width=800&height=600&seq=3&orientation=landscape"
+alt="Urban Waterfront 3D Model"
+class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="heading text-2xl font-semibold mb-4 text-gray-800">Nyhamnen Waterfront</h3>
+<p class="text-gray-700 mb-4 line-clamp-3">
+En 3D-modell för ombyggnaden av Nyhamnen som kombinerar modernt stadsboende med tillgängliga offentliga utrymmen.
+</p>
+<button class="text-primary hover:text-gray-700 flex items-center gap-2">
+Läs mer <i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="section bg-[#EBE6E2]">
+<div class="container mx-auto px-6 py-20">
+<h2 class="heading text-4xl font-semibold mb-12 text-center text-gray-800">Contact Me</h2>
+<div class="max-w-2xl mx-auto">
+<form class="space-y-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" id="name" name="name" required
+class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" id="email" name="email" required
+class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea id="message" name="message" rows="4" required
+class="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20"></textarea>
+</div>
+<button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-button hover:bg-gray-700 transition-colors">
+Send message
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<h3 class="heading text-2xl font-semibold mb-2">Mariam Habib</h3>
+<p class="text-gray-400">Urban Planning Student</p>
+</div>
+<div class="flex gap-6">
+<a href="http://linkedin.com/in/mariam-habib-69637b202" class="hover:text-primary transition-colors flex items-center gap-2">
+<i class="ri-linkedin-line ri-xl"></i> linkedin.com/in/mariam-habib-69637b202
+</a>
+<a href="mailto:mariam.habiib@hotmail.com" class="hover:text-primary transition-colors flex items-center gap-2">
+<i class="ri-mail-line ri-xl"></i> mariam.habiib@hotmail.com
+</a>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+<p>&copy; 2025 Mariam Habib. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<button class="scroll-top fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-all"
+aria-label="Scroll to top">
+<i class="ri-arrow-up-line ri-xl"></i>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const scrollTopBtn = document.querySelector('.scroll-top');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+scrollTopBtn.classList.add('visible');
+} else {
+scrollTopBtn.classList.remove('visible');
+}
+const sections = document.querySelectorAll('section');
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+if (window.pageYOffset >= sectionTop - 100) {
+current = section.getAttribute('id');
+}
+});
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href').slice(1) === current) {
+link.classList.add('active');
+}
+});
+});
+scrollTopBtn.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+navLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+const targetId = link.getAttribute('href');
+document.querySelector(targetId).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+});
+</script>
+</body>
+</html>
