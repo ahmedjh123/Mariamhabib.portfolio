@@ -120,7 +120,7 @@ Through my work, including GIS analysis and urban design, I strive to make citie
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <!-- Project 1 -->
 <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
-<img src="https://readdy.ai/api/search-image?query=Urban%20planning%20GIS%20map%20showing%20accessibility%20analysis%20of%20a%20neighborhood%20with%20color-coded%20buildings%2C%20streets%2C%20and%20accessibility%20points%20marked%2C%20detailed%20urban%20footprint%20with%20legend%20showing%20entrances%2C%20disabled%20parking%20spaces%2C%20and%20public%20transportation%20stops&width=800&height=600&seq=2&orientation=landscape"
+<img src="image1.png"
 alt="GIS Accessibility Map"
 class="w-full h-64 object-cover">
 <div class="p-6">
@@ -135,7 +135,7 @@ Read more <i class="ri-arrow-right-line"></i>
 </div>
 <!-- Project 2 -->
 <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
-<img src="https://readdy.ai/api/search-image?query=3D%20architectural%20model%20of%20a%20waterfront%20urban%20development%20with%20high-rise%20buildings%20featuring%20green%20roofs%2C%20wooden%20promenade%20along%20waterfront%2C%20blue%20water%2C%20circular%20green%20space%2C%20tiered%20platforms%2C%20sustainable%20urban%20design%20concept%2C%20SketchUp%20style%20rendering&width=800&height=600&seq=3&orientation=landscape"
+<img src="image2.png"
 alt="Urban Waterfront 3D Model"
 class="w-full h-64 object-cover">
 <div class="p-6">
@@ -188,11 +188,11 @@ Send message
 <p class="text-gray-400">Urban Planning Student</p>
 </div>
 <div class="flex gap-6">
-<a href="http://linkedin.com/in/mariam-habib-69637b202" class="hover:text-primary transition-colors flex items-center gap-2">
-<i class="ri-linkedin-line ri-xl"></i> linkedin.com/in/mariam-habib-69637b202
+<a href="http://linkedin.com/in/mariam-habib-69637b202" class="hover:text-primary transition-colors flex items-center" aria-label="LinkedIn" target="_blank" rel="noopener">
+<i class="ri-linkedin-line ri-xl"></i>
 </a>
-<a href="mailto:mariam.habiib@hotmail.com" class="hover:text-primary transition-colors flex items-center gap-2">
-<i class="ri-mail-line ri-xl"></i> mariam.habiib@hotmail.com
+<a href="mailto:mariam.habiib@hotmail.com" class="hover:text-primary transition-colors flex items-center" aria-label="Email" target="_blank" rel="noopener">
+<i class="ri-mail-line ri-xl"></i>
 </a>
 </div>
 </div>
@@ -246,6 +246,19 @@ behavior: 'smooth'
 });
 });
 });
+// Kontaktformulär mailto-script
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const subject = encodeURIComponent('Portfolio kontakt från ' + name);
+    const body = encodeURIComponent('Namn: ' + name + '\nE-post: ' + email + '\n\nMeddelande:\n' + message);
+    window.location.href = `mailto:mariam.habiib@hotmail.com?subject=${subject}&body=${body}`;
+  });
+}
 </script>
 </body>
 </html>
